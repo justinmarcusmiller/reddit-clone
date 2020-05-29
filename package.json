@@ -1,0 +1,38 @@
+{
+  "name": "reddit-clone",
+  "version": "1.0.0",
+  "description": "reddit clone",
+  "main": "server.js",
+  "scripts": {
+    "client-install": "npm install --prefix client",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://git.heroku.com/secret-basin-18475.git"
+  },
+  "author": "Justin Miller",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WD2SP20/wd2sp20-justinmarcusmiller/issues"
+  },
+  "homepage": "https://github.com/WD2SP20/wd2sp20-justinmarcusmiller#readme",
+  "dependencies": {
+    "aws-sdk": "^2.683.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "concurrently": "^5.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.14",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}

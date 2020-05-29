@@ -1,0 +1,39 @@
+.remove-btn {
+    border-radius: 5px;
+}
+
+.fade-enter {
+    opacity: 0.01;
+}
+
+.fade-enter-active {
+    opacity: 1;
+    transition: opacity 1000ms ease-in;
+}
+
+.fade-exit {
+    opacity: 1;
+
+}
+
+.fade-exit-active {
+    opacity: 0.01;
+    transition: opacity 1000ms ease-in;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group {
+    flex-wrap: nowrap;
+}
+
+.input-group-prepend {
+    display: contents;
+}
+
+.navbar {
+    box-shadow: 0 4px 6px hsla(0, 0%, 0%, 0.2);
+}

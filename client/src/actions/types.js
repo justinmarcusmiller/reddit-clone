@@ -1,0 +1,11 @@
+//Submissions
+export const GET_SUBMISSIONS = 'GET_SUBMISSIONS';
+export const ADD_SUBMISSION = 'ADD_SUBMISSION';
+export const DELETE_SUBMISSION = 'DELETE_SUBMISSION';
+export const SUBMISSIONS_LOADING = 'SUBMISSIONS_LOADING';
+
+//Users
+export const GET_USERS = 'GET_USERS';
+export const ADD_USER = 'ADD_USER';
+export const DELETE_USER = 'DELETE_USER';
+export const USERS_LOADING = 'USERS_LOADING';
