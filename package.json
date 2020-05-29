@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "reddit clone",
   "main": "server.js",
-  "engines": {
-    "node": "12.16.x"
-  },
   "scripts": {
     "client-install": "npm install --prefix client",
     "test": "echo \"Error: no test specified\" && exit 1",
