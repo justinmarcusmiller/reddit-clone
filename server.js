@@ -9,7 +9,7 @@ app.use(express.json());
 //app.use(bodyParser.json());
 
 // MongoDB Config
-const db = config.get('mongoURI');
+const db = MongoURI = process.env.DB_KEY;
 
 // Connect to MongoDB
 mongoose.connect(db, { useUnifiedTopology: true, useNewUrlParser: true })
