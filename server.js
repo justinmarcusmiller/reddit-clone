@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const path = require('path');
+const config = require('config')
 const app = express();
 
 // Bodyparser
@@ -8,7 +9,7 @@ app.use(express.json());
 //app.use(bodyParser.json());
 
 // MongoDB Config
-const db = require('./config/keys').mongoURI;
+const db = config.get('mongoURI');
 
 // Connect to MongoDB
 mongoose.connect(db, { useUnifiedTopology: true, useNewUrlParser: true })
@@ -18,6 +19,7 @@ mongoose.connect(db, { useUnifiedTopology: true, useNewUrlParser: true })
 // Routes
 app.use('/api/submissions', require('./routes/api/submissions'));
 app.use('/api/users', require('./routes/api/users'));
+app.use('/api/auth', require('./routes/api/auth'));
 
 // Serve static assets if in production
 if(process.env.NODE_ENV === 'production') {

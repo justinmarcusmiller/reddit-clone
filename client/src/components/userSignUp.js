@@ -56,6 +56,7 @@ class UserSignUp extends Component {
               <FormGroup>
                 <Label for="username">Username: </Label>
                 <Input
+                  disabled
                   type="text"
                   name="username"
                   id="username"
@@ -65,6 +66,7 @@ class UserSignUp extends Component {
                 <Label for="password">Password</Label>
                 <InputGroup>
                   <Input
+                    disabled
                     type="password"
                     name="password"
                     id="password"
@@ -74,6 +76,7 @@ class UserSignUp extends Component {
                 <Label for="password2">Re-Enter Password</Label>
                 <InputGroup>
                   <Input
+                    disabled
                     type="password"
                     name="password2"
                     id="password2"
