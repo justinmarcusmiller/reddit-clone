@@ -7,6 +7,7 @@ import {
   Nav,
   NavItem,
   NavLink,
+  Link,
   Container,
 } from "reactstrap";
 import { BrowserRouter as Link } from "react-router-dom";
