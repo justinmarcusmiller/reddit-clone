@@ -2,7 +2,7 @@ import React from "react";
 import AppNavBar from "./components/appNavBar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import SubmissionsList from "./components/submissionsList";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { Provider } from "react-redux";
 import store from "./store";
 import UserSignUp from "./components/userSignUp";
