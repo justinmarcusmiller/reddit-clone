@@ -1,10 +1,7 @@
 import React, { Component } from "react";
 import {
   Button,
-  Modal,
   Container,
-  ModalHeader,
-  ModalBody,
   Form,
   FormGroup,
   Label,
@@ -12,11 +9,10 @@ import {
   InputGroupAddon,
   InputGroupText,
   Input,
-  NavLink,
 } from "reactstrap";
 import { connect } from "react-redux";
 import { addSubmission } from "../actions/submissionActions";
-import { BrowserRouter as Router, Switch, Route, Link, Redirect } from "react-router-dom";
+import { BrowserRouter as Redirect } from "react-router-dom";
 
 class SubmitPost extends Component {
   state = {
@@ -35,7 +31,7 @@ class SubmitPost extends Component {
 
     const newSubmission = {
       title: this.state.title,
-      url: "https://" + this.state.url,
+      url: "http://" + this.state.url,
       author: this.state.author,
     };
 
@@ -67,7 +63,7 @@ class SubmitPost extends Component {
             <Label for="url">URL</Label>
             <InputGroup>
               <InputGroupAddon addonType="prepend">
-                <InputGroupText>https://</InputGroupText>
+                <InputGroupText>http://</InputGroupText>
                 <Input
                   type="text"
                   name="url"

@@ -1,22 +1,15 @@
 import React, { Component } from "react";
 import {
   Button,
-  Modal,
   Container,
-  ModalHeader,
-  ModalBody,
   Form,
   FormGroup,
   Label,
   InputGroup,
-  InputGroupAddon,
-  InputGroupText,
   Input,
-  NavLink,
 } from "reactstrap";
 import { connect } from "react-redux";
-import { addSubmission } from "../actions/submissionActions";
-import { BrowserRouter as Router, Switch, Route, Link, Redirect } from "react-router-dom";
+import { BrowserRouter as Redirect } from "react-router-dom";
 
 class UserSignIn extends Component {
   state = {
@@ -45,10 +38,12 @@ class UserSignIn extends Component {
     return (
       <Container>
         <h2>Sign In</h2>
+        <p>Sign-In is not available yet</p>
         <Form onSubmit={this.onSubmit}>
               <FormGroup>
                 <Label for="username">Username: </Label>
                 <Input
+                  disabled
                   type="text"
                   name="username"
                   id="username"
@@ -58,6 +53,7 @@ class UserSignIn extends Component {
                 <Label for="password">Password</Label>
                 <InputGroup>
                   <Input
+                    disabled
                     type="password"
                     name="password"
                     id="password"
@@ -80,4 +76,4 @@ const mapStateToProps = (state) => ({
   user: state.user,
 });
 
-export default connect(mapStateToProps, { addSubmission })(UserSignIn);
+export default connect(mapStateToProps, {  })(UserSignIn);

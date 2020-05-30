@@ -1,22 +1,16 @@
 import React, { Component } from "react";
 import {
   Button,
-  Modal,
   Container,
-  ModalHeader,
-  ModalBody,
   Form,
   FormGroup,
   Label,
   InputGroup,
-  InputGroupAddon,
-  InputGroupText,
   Input,
-  NavLink,
 } from "reactstrap";
 import { connect } from "react-redux";
 import { addUser } from "../actions/userActions";
-import { BrowserRouter as Router, Switch, Route, Link, Redirect } from "react-router-dom";
+import { BrowserRouter as Redirect } from "react-router-dom";
 
 class UserSignUp extends Component {
   state = {
@@ -52,6 +46,7 @@ class UserSignUp extends Component {
     return (
       <Container>
         <h2>Sign Up</h2>
+        <p>Sign-Up is not available yet</p>
         <Form onSubmit={this.onSubmit}>
               <FormGroup>
                 <Label for="username">Username: </Label>
