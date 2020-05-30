@@ -12,7 +12,7 @@ import {
 } from "reactstrap";
 import { connect } from "react-redux";
 import { addSubmission } from "../actions/submissionActions";
-import { BrowserRouter as Redirect } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route, Link, Redirect } from "react-router-dom";
 
 class SubmitPost extends Component {
   state = {
@@ -36,7 +36,6 @@ class SubmitPost extends Component {
     };
 
     this.props.addSubmission(newSubmission);
-    alert('Link added successfully');
     this.setState({redirect: true});
   }
 
