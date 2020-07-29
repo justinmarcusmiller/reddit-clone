@@ -15,6 +15,11 @@ import { addSubmission } from "../actions/submissionActions";
 import { BrowserRouter as Router, Switch, Route, Link, Redirect } from "react-router-dom";
 
 class SubmitPost extends Component {
+  constructor(props) {
+    super(props);
+    this.validiateURL = this.validiateURL.bind(this);
+  }
+
   state = {
     modal: false,
     title: "",
@@ -22,22 +27,35 @@ class SubmitPost extends Component {
     author: "",
   };
 
+  validiateURL(input) {
+    if (input.startsWith("https://www.") || input.startsWith("http://www.")) { // if valid input
+      return input
+    } else if (input.startsWith("www.")){ // if missing http or https
+      return "http://" + input
+    } else {
+      return "http://www." + input
+    }
+  }
+
   onChange = (e) => {
     this.setState({ [e.target.name]: e.target.value });
   };
 
   onSubmit = (e) => {
     e.preventDefault();
+    this.state.url = this.validateURL(this.state.url);
 
     const newSubmission = {
       title: this.state.title,
-      url: "http://" + this.state.url,
+      url: this.state.url,
       author: this.state.author,
     };
 
     this.props.addSubmission(newSubmission);
     this.setState({redirect: true});
   }
+
+  
 
   render() {
 
@@ -61,16 +79,13 @@ class SubmitPost extends Component {
             <br />
             <Label for="url">URL</Label>
             <InputGroup>
-              <InputGroupAddon addonType="prepend">
-                <InputGroupText>http://</InputGroupText>
-                <Input
-                  type="text"
-                  name="url"
-                  id="url"
-                  placeholder="Add URL"
-                  onChange={this.onChange}
-                />
-              </InputGroupAddon>
+              <Input
+                type="text"
+                name="url"
+                id="url"
+                placeholder="Add URL"
+                onChange={this.onChange}
+              />
             </InputGroup>
 
             <br />

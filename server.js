@@ -4,6 +4,8 @@ const path = require('path');
 const config = require('config')
 const app = express();
 
+require('dotenv').config();
+
 // Bodyparser
 app.use(express.json());
 //app.use(bodyParser.json());

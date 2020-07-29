@@ -14,20 +14,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://git.heroku.com/still-dusk-55908.git"
+    "url": "https://github.com/justinmarcusmiller/reddit-clone.git"
   },
   "author": "Justin Miller",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/WD2SP20/wd2sp20-justinmarcusmiller/issues"
+    "url": "https://github.com/justinmarcusmiller/reddit-clone/issues"
   },
-  "homepage": "https://github.com/WD2SP20/wd2sp20-justinmarcusmiller#readme",
+  "homepage": "https://github.com/justinmarcusmiller/reddit-clone#readme",
   "dependencies": {
     "aws-sdk": "^2.683.0",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "concurrently": "^5.2.0",
     "config": "^3.3.1",
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.9.14",
